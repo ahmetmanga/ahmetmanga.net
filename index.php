@@ -1,0 +1,32 @@
+<?php
+	ob_start();
+	session_start();
+	header("Cache-Control:public");
+	error_reporting(0);
+	require('route.class.php');
+
+	route::get('','SiteController@index');
+	route::get('admin_login','SiteController@admin_login');
+	route::post('admin_login','SiteController@admin_post');
+	route::get('cikis','SiteController@logout');
+	route::get('page_edit/{id}','SiteController@page_edit');
+	route::post('page_edit','SiteController@page_post');
+	route::get('genel_ayarlar','SiteController@genel_ayarlar');
+	route::post('genel_ayarlar','SiteController@genel_ayarlar_post');
+	route::get('sifre_degistir','SiteController@sifre_form');
+	route::post('sifre_degistir','SiteController@sifre_post');
+	route::get('sosyal_hesaplar','SiteController@sosyal_hesaplar');
+	route::get('hesap_ekle','SiteController@hesap_form');
+	route::post('hesap_post','SiteController@hesap_post');
+	route::get('hesap_duzenle/{id}','SiteController@hesap_duzenle_form');
+	route::post('hesap_duzenle_post','SiteController@hesap_duzenle_post');
+	route::get('hesap_sil/{id}','SiteController@sosyal_hesap_sil');
+	route::get('timeline','SiteController@timeline');
+	route::get('timeline_ekle','SiteController@timeline_ekle');
+	route::post('timeline_post','SiteController@timeline_post');
+	route::get('timeline_duzenle/{id}','SiteController@timeline_duzenle');
+	route::post('timeline_duzenle_post','SiteController@timeline_duzenle_post');
+	route::get('timeline_sil/{id}','SiteController@timeline_sil');
+	route::error();
+
+?>
