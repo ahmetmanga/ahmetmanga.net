@@ -39,9 +39,10 @@
 				<nav class="navbar navbar-inverse">
 					<div class="container-fluid">
 						<div class="navbar-header">
-							<button class="navbar-toggle" data-toggle="collapse" id="#admin_page"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></button>
+							<button class="navbar-toggle" data-toggle="collapse" data-target="#admin_page"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></button>
 						</div>
-						<ul class="nav navbar-nav">
+						<div class="collapse navbar-collapse" id="admin_page">
+							<ul class="nav navbar-nav">
 							<li><a href="<?php echo parent::$site_url;?>page_edit/1"><i class="fa fa-home"></i> Hakkımda</a></li>
 							<li><a href="<?php echo parent::$site_url;?>page_edit/2"><i class="fa fa-graduation-cap"></i> Projeler</a></a></li>
 							<li><a href="<?php echo parent::$site_url;?>page_edit/3"><i class="fa fa-newspaper-o"></i> Kariyer</a></a></li>
@@ -53,6 +54,7 @@
 							<li><a href="<?php echo parent::$site_url;?>sifre_degistir"><i class="fa fa-user"></i> Şifre Değiştir</a></li>
 							<li><a href="<?php echo parent::$site_url;?>cikis"><i class="fa fa-lock"></i> Çıkış Yap</a></li>
 						</ul>
+						</div>
 					</div>		
 				</nav>	
 			
